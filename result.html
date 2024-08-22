@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #495057;
+            margin: 10px 0;
+        }
+        .suggestions {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #343a40;
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .details {
+            margin-top: 20px;
+            text-align: left;
+            font-size: 16px;
+            color: #343a40;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <p>YOU HAVE A {{ probability }}% CHANCE OF A HEART ATTACK RISK</p>
+        <div class="suggestions">
+            <h2>Suggestions and Precautions</h2>
+            <p>{{ suggestion }}</p>
+        </div>
+        <div class="details">
+            <h2>Details Provided</h2>
+            <p><strong>Age:</strong> {{ form_data.Age }}</p>
+            <p><strong>Sex:</strong> {{ form_data.Sex }}</p>
+            <p><strong>Cholesterol:</strong> {{ form_data.Cholesterol }}</p>
+            <p><strong>Smoking:</strong> {{ form_data.Smoking }}</p>
+            <p><strong>Obesity:</strong> {{ form_data.Obesity }}</p>
+            <p><strong>Exercise Hours Per Week:</strong> {{ form_data.Exercise_Hours_Per_Week }}</p>
+            <p><strong>Stress Level:</strong> {{ form_data.Stress_Level }}</p>
+            <p><strong>Sedentary Hours Per Day:</strong> {{ form_data.Sedentary_Hours_Per_Day }}</p>
+            <p><strong>Income:</strong> {{ form_data.Income }}</p>
+            <p><strong>Triglycerides:</strong> {{ form_data.Triglycerides }}</p>
+            <p><strong>Physical Activity Days Per Week:</strong> {{ form_data.Physical_Activity_Days_Per_Week }}</p>
+            <p><strong>Systolic:</strong> {{ form_data.Systolic }}</p>
+            <p><strong>Diastolic:</strong> {{ form_data.Diastolic }}</p>
+        </div>
+        <a href="{{ url_for('home') }}">Go back</a>
+    </div>
+</body>
+</html>

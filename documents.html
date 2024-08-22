@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color: rgba(255, 255, 255, 0.8); /* White with 80% opacity */
+            border-bottom: 1px solid #ddd;
+            overflow: hidden;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            float: left;
+            color: #007bff;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            font-size: 16px;
+            line-height: 24px;
+        }
+        .navbar a:hover {
+            background-color: #f0f0f0;
+            border-radius: 4px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 80px auto 40px auto; /* Adjust margin to account for fixed navbar */
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9); /* White with 90% opacity */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #343a40;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #495057;
+            margin-top: 20px;
+        }
+        p, ul {
+            font-size: 16px;
+            color: #495057;
+            margin: 10px 0;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('documents') }}">Documents</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+
+    <div class="container">
+        <h1>Project Documents</h1>
+
+        <h2>Project Overview</h2>
+        <p>This project aims to predict the risk of heart attack based on various health and lifestyle factors. The web application allows users to input their details and receive a prediction about their risk of heart attack.</p>
+
+        <h2>Model Details</h2>
+        <p>The model used for prediction is a Support Vector Machine (SVM). It was trained using a dataset of health and lifestyle features. The model's performance was evaluated using cross-validation techniques to ensure its reliability.</p>
+
+        <h2>Data Description</h2>
+        <p>The dataset includes features such as Age, Sex, Cholesterol, Smoking, Obesity, Exercise Hours Per Week, Stress Level, Sedentary Hours Per Day, Income, Triglycerides, Physical Activity Days Per Week, Systolic, and Diastolic. The data was preprocessed to handle missing values and normalize the features.</p>
+
+        <h2>Methodology</h2>
+        <p>Feature engineering was performed to select the most relevant features for prediction. The SVM model was chosen based on its ability to handle high-dimensional data and provide accurate predictions. The model's performance was assessed using metrics such as accuracy, precision, recall, and F1-score.</p>
+
+        <h2>User Guide</h2>
+        <p>To use the application, enter your details in the form on the home page and submit. The result will be displayed on a separate page, including a risk prediction and suggestions based on your inputs.</p>
+
+        <h2>Future Work</h2>
+        <p>Future improvements may include expanding the dataset, experimenting with different models, and incorporating additional features to enhance the prediction accuracy. User feedback will be valuable for further refinement of the application.</p>
+    </div>
+</body>
+</html>
